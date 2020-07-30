@@ -3,6 +3,22 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
+
+/*
+          | a | b |
+        ---------
+        *  | c |
+        ---------
+        | d | e |
+
+        ---------
+        +  | f | g |
+        ---------
+        | m | n |
+        ---------
+        In the above figure a, b, c, d, e, f, g, m, and n, are single digit numbers. These numbers are to be chosen such that they are all unique (no repetitions) and they satisfy the above expression.
+        Write program to identify variables.
+*/
 public class Test1 {
     public static void main(String[] args) {
         List<List<Integer>> condition1 = satisfyCondition1();
