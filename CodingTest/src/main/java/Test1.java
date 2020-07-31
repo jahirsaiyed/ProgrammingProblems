@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 
 /*
@@ -21,14 +18,17 @@ import java.util.List;
 */
 public class Test1 {
     public static void main(String[] args) {
-        List<List<Integer>> condition1 = satisfyCondition1();
-        List<List<Integer>> finalResult = satisfyCondition2(condition1);
+//        List<List<Integer>> condition1 = satisfyCondition1();
+//        List<List<Integer>> finalResult = satisfyCondition2(condition1);
 
-        for (List list : finalResult) {
-            System.out.println(list.get(0) + "" + list.get(1) + "\n*" + list.get(2) + "\n" + list.get(3) + "" + list.get(4));
-            System.out.println("+" + list.get(5) + "" + list.get(6) + "\n" + list.get(7) + "" + list.get(8));
-            System.out.println("-------");
-        }
+        Date d = new Date();
+        System.out.println(d);
+
+//        for (List list : finalResult) {
+//            System.out.println(list.get(0) + "" + list.get(1) + "\n*" + list.get(2) + "\n" + list.get(3) + "" + list.get(4));
+//            System.out.println("+" + list.get(5) + "" + list.get(6) + "\n" + list.get(7) + "" + list.get(8));
+//            System.out.println("-------");
+//        }
 
     }
 
