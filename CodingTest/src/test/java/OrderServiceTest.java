@@ -1,6 +1,7 @@
 import org.junit.Assert;
 import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
@@ -11,17 +12,19 @@ import java.util.Collections;
 public class OrderServiceTest {
 
     @Mock
-    OrderDAO orderDAO;
+    private OrderDAO orderDAO;
     @InjectMocks
-    OrderService orderService;
+    private OrderService orderService = new OrderServiceImpl();
 
     @BeforeClass
-    public static void init() {
+    public void init() {
         MockitoAnnotations.initMocks(OrderServiceTest.class);
     }
 
     @Test
     public void testGetAllOrdersNull() {
+        orderDAO = Mockito.mock(OrderDAOImpl.class);
+
         Mockito.when(orderDAO.getAllOrders()).thenReturn(null);
         Assert.assertNull(orderService.getAllOrders());
     }
